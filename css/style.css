@@ -1,6 +1,9 @@
 body{
     font-family: 'Mukta', sans-serif;
 }
+html{
+    max-width: 120%;
+}
 p{
     margin: 0;
 }
@@ -22,22 +25,19 @@ header{
 }
 
 .menu ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+list-style-type: none;
+padding: 0;
 }
 .menu ul li{
-    display:inline-block;
-    margin-right: 20px;
-    font-size: 20px;
-
+    font-size: 18px;
+    float: left;
 }
 .menu ul li a{
-color: white;
-display: block;
+    display:block;
+    color: white;
+    padding: 12px 15px;
 }
 .menu ul li a:hover{
-    text-decoration: none;
     color: white;
     background-color:darkblue;
 }
@@ -115,6 +115,7 @@ display: block;
 }
 .trending a:hover,.english a:hover{
     text-decoration: none;
+    color: white;
 }
 .english {
     background: red;
@@ -375,14 +376,20 @@ a:hover{
     margin-bottom: 20px;
     filter: brightness(80%);
 }
-.corona-img-grid img{
+.corona-img-grid .corona-news img{
     height: 350px;
     object-fit: cover;
-    filter: brightness(70%);
 }
 .corona-news{
     position: relative;
     margin-right: 15px;
+}
+.corona-news::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    box-shadow: inset 0px -100px 27px 1px rgba(0,0,0,0.65);
 }
 .corona-news .corona-news-text{
     position: absolute;
@@ -450,6 +457,7 @@ a:hover{
 }
 .country-grid img{
     height: 90px;
+    object-fit: cover;
 }
 .feature{
     background: rgb(44, 41, 41);
@@ -627,6 +635,7 @@ a:hover{
 .entertainment .headline img{
     height: 540px;
     object-fit: cover;
+    
 }
 .entertainment .entertainment-grid{
     margin-bottom: 10px;
@@ -636,30 +645,35 @@ a:hover{
     width: 100%;
     object-fit: cover;
 }
-.entertainment-grid .bw{
-    filter: grayscale(1);
-}
-.entertainment .headline-img{
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
-}
-.entertainment .headline-text{
+.entertainment .headline-text h2{
+    margin-bottom: 100px;
     position: absolute;
     bottom: 0;
-    margin-bottom: 50px;
-    padding: 0 10px;
+    width: 80%;
     margin-left: 30px;
-}
-.entertainment .headline-img .headline-text h2{
-    font-size: 35px;
+    font-size:35px;
     color: white;
 }
+.entertainment .headline-text h2:hover{
+    color: red;
+}
+.entertainment .headline-img .div1{
+    position: relative;
+}
+.entertainment .headline-img .div1::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(249, 248, 249, 0)30%, rgba(12, 12, 12, 1)80%);
+}
+
 .entertainment h2{
     margin-top: 20px;
 }
 .entertainment .entertainment-extra-grid img{
     height: 300px;
     object-fit: cover;
-
 }
 .health{
     background: rgb(195, 217, 226);
