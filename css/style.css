@@ -1,15 +1,28 @@
 body{
     font-family: 'Mukta', sans-serif;
+    margin: 0 auto;
+    padding: 0 0px;
+    box-sizing: border-box;
 }
-html{
-    max-width: 120%;
-}
-p{
-    margin: 0;
-}
+.sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+  #navbar{
+      overflow: hidden;
+      width: 100%;
+      background-color: blue;
+  }
+  .active{
+      background-color: darkblue;
+  }
 .padding-0{
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1280px;
 }
 .top-header{
     margin: 20px 0;
@@ -20,24 +33,27 @@ p{
     margin-right: 10px;
     margin-top: 30px;
 }
+
 header{
     background: blue;
 }
-
 .menu ul{
 list-style-type: none;
+display: flex;
+text-align: center;
+margin-bottom: 0;
 padding: 0;
 }
 .menu ul li{
     font-size: 18px;
-    float: left;
+
 }
-.menu ul li a{
+.menu ul li a, header .header-nav a{
     display:block;
     color: white;
     padding: 12px 15px;
 }
-.menu ul li a:hover{
+.menu ul li a:hover, header .header-nav:hover{
     color: white;
     background-color:darkblue;
 }
@@ -85,8 +101,7 @@ padding: 0;
     visibility: visible;
 }
 .search-box, .time{
-    height: 50px;
-    width: 50px;
+    padding: 0 20px;
 }
 .search-box i, .time i{
     color: white;
@@ -108,8 +123,6 @@ padding: 0;
     margin-right: 5px;
 }
 .trending a{
-    width: 80px;
-    height: 50px;
     color: #f4a100;
     line-height: 50px;
 }
@@ -167,7 +180,14 @@ a:hover{
     opacity: 0.5;
 }
 .ad-banner{
-    margin: 20px 0;
+    margin: 20px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.ad-banner img{
+    align-items: center;
+    justify-content: center;
 }
 .headline-1{
     margin: 30px auto;
@@ -235,13 +255,10 @@ a:hover{
 .bulletin-grid{
     margin-bottom: 20px;    
 }
-.bulletin-grid .flex-2{
-    margin-left: 20px;
-}
 .bulletin-grid img{
     position: relative;
-    height: 80px;
-    width: 120px;
+    height: 100%;
+    width: 90%;
     object-fit: cover;
 }
 .bulletin-grid h4, h4{
@@ -270,6 +287,7 @@ a:hover{
     padding: 5px 15px;
     border-radius: 20px;
     margin-right: 20px;
+    margin-bottom: 0;
 }
 .news-option-grid p{
     font-size: 14px;
@@ -300,6 +318,7 @@ a:hover{
 }
 .news-img img{
     object-fit: cover;
+    height: 100%;
     object-position: 50% 70%;    
 }
 .news-detail{
@@ -310,15 +329,14 @@ a:hover{
 .news-headline{
     margin-bottom: 40px;
 }
-.news-headline img{
-    height: 100%;
-}
+
 .news-grid h4{
     margin-top: 20px;
     font-weight:500;
 }
 .news-grid img{
     height: 200px;
+    width: 100%;
     object-fit: cover;
 }
 .thoughts,.blog, .trending1,.tech-comments, .interview-extra, .sports-side-grid{
@@ -341,7 +359,7 @@ a:hover{
     background: rgb(214, 209, 209);
     color: black;
 }
-.blog .news-option, .corona-title .news-option{
+.blog .news-option, -title .news-option{
     background: rgb(189, 186, 186);
     color: black;
 }
@@ -357,10 +375,10 @@ a:hover{
     border-bottom: 1px solid rgba(116, 109, 109, .3);
 }
 .people-grid1 img{
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
     object-fit: cover;
-    border-radius: 60px;
+    border-radius: 70px;
 }
 .people-grid1 p{
     font-size: 12px;
@@ -374,7 +392,6 @@ a:hover{
 }
 .corona-img-grid{
     margin-bottom: 20px;
-    filter: brightness(80%);
 }
 .corona-img-grid .corona-news img{
     height: 350px;
@@ -406,7 +423,6 @@ a:hover{
 }
 .corona-special{
     padding-top: 30px;
-    margin-bottom: 10px;
     margin-bottom: 20px;
 }
 .corona-special .corona-title h2{
@@ -484,23 +500,28 @@ a:hover{
 }
 .feature .feature-grid h4{
     color: white;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 .feature .feature-grid img{
     width: 100%;
     object-fit: cover;
-    height: 150px;
+    height: 200px;
 }
 .feature .feature-grid:hover{
     cursor: pointer;
+}
+.tech{
+    margin-top: 20px;
 }
 .tech .tech-grid{
     margin-bottom: 20px;
 }
 .tech .tech-comments-grid{
     border-bottom: 1px solid rgb(235, 230, 230);
-    margin-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0;
+}
+.tech-comments h2{
+    margin-bottom: 0;
 }
 .tech .news-title .news-option{
     background: rgb(146, 145, 145);
@@ -512,7 +533,7 @@ a:hover{
 }
 .tech .tech-comments-grid .number{
     text-align: center;
-    padding: 10px;
+    padding: 6px 30px;
     background:rgb(243, 240, 240);
 }
 .tech .tech-comments-grid .number h4{
@@ -523,6 +544,7 @@ a:hover{
 }
 .tech .tech-comments-grid .number p{
     font-size: 12px;
+    margin-bottom: 0;
 }
 .tech .tech-comments-grid:hover .number{
     background: blue;
@@ -535,7 +557,9 @@ a:hover{
     margin: 30px 0;
 }
 .tech .tech-grid img{
-    height: 90px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .interview .news-title .news-option:hover, .sports .news-option:hover, .world .news-option:hover, .nepal .news-option:hover{
     background: blue;
@@ -546,7 +570,7 @@ a:hover{
 }
 .interview-main img{
     object-fit: cover;
-    height: 300px;
+    height: 100%;
 }
 .interview{
     margin-bottom: 50px;
@@ -554,24 +578,20 @@ a:hover{
 }
 
 .interview-text{
-    position: relative;
-    background: blue;    
-    height: 100%;
+    position: relative;  
     padding: 50px;
 }
 .interview-main .interview-headline{
     padding: 20px;
-    height: 100%;
     color: white;
     font-style: italic;
-    flex-wrap: wrap;
 }
 .interview .interview-main .interview-headline a{
     color: white;
 }
 .interview-text h2{
     display: inline-block;
-    font-size: 34px;
+    font-size: 44px;
 }
 .interview-quote{
     top: 30px;
@@ -594,6 +614,7 @@ a:hover{
 }
 .interview-extra-grid img{
     height: 80px;
+    width: 100%;
     object-fit: cover;
 }
 .interview-grid img{
@@ -638,12 +659,12 @@ a:hover{
     
 }
 .entertainment .entertainment-grid{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .entertainment-grid img{
     height: 100px;
-    width: 100%;
     object-fit: cover;
+    width: 100%;
 }
 .entertainment .headline-text h2{
     margin-bottom: 100px;
@@ -703,8 +724,11 @@ a:hover{
     object-fit: cover;
 }
 .health .health-extra-grid h4{
-    margin-top: 20px;
+    margin: 20px auto;
     font-size: 25px;
+}
+.health .health-extra-grid img{
+    width: 100%;
 }
 .sports .sports-headline img{
     height: 250px;
@@ -718,6 +742,7 @@ a:hover{
 }
 .sports .sports-grid img{
     height: 100px;
+    width: 100%;
     object-fit: cover;
 }
 .sports-side-grid-text{
@@ -725,6 +750,7 @@ a:hover{
 }
 .sports .sports-side-grid-img img{
     object-fit: cover;
+    width: 100%;
     height: 80px;
 }
 .foreign .foreign-headline img{
@@ -746,10 +772,15 @@ a:hover{
 }
 .foreign .foreign-bottom-grid img{
     height: 100px;
+    margin-bottom: 20px;
     object-fit: cover;
+    width: 100%;
 }
 .foreign .foreign-side-grid{
     margin: 20px auto;
+}
+.foreign .foreign-side-grid img{
+    width: 100%;
 }
 .foreign .foreign-side-grid h4{
     margin-top: 20px;
@@ -817,13 +848,14 @@ a:hover{
 }
 .nepal .gallery .gallery-grid{
     background: white;
-    height: 350px;
+    height: 100%;
     border-radius: 5px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .nepal .gallery .gallery-grid img{
     object-fit: cover;
     height: 250px;
+    width: 100%;
     border-radius: 5px 5px 0 0;
 }
 .img-text{
@@ -855,9 +887,7 @@ a:hover{
     font-size: 20px;
 }
 .footer-menu .footer-div .office-detail{
-    position: absolute;
-    top: 0;
-    left: 30%;
+    margin-left: 30%;
 }
 .footer-menu .office-detail .social-media{
     margin-top: 20px;
@@ -870,6 +900,7 @@ a:hover{
 }
 .footer .footer-details ul, .footer-menu ul{
     list-style: none;
+    padding: 0;
 }
 .footer .footer-details ul{
     margin-bottom: 0;
@@ -887,6 +918,9 @@ a:hover{
     margin-right: 20px;
     color: rgb(207, 202, 202);
 }
+.footer-menu ul li{
+    padding-left: 0;
+}
 .footer-details ul{
     padding-left: 0;
 }
@@ -896,6 +930,404 @@ a:hover{
 .footer-menu #footer-logo-text{
     color: #00bfff;
 }
+.footer .footer-details ul{
+    margin-left: 0;
+}
+.footer .footer-copyright p{
+    margin-bottom: 0;
+}
 body::selection{
     background: skyblue;
+}
+
+@media screen and (max-width: 425px){
+    .hide-mobile{
+        display: none;
+    }
+    #logo-date{
+        font-size: 18px;
+        margin-top: 55px;
+        margin-right: 20px;
+    }
+    .ad-banner{
+        display: none;
+    }
+    .headline-1 .headline-title h1{
+         font-size: 2.5rem;
+         margin: 0;
+    }
+    .headline-1 .headline-title h4{
+        font-size: 17px;
+        line-height: 30px;
+    }
+    .headline-1 .headline-img img{
+        height: 200px;
+    }
+    .headline-1 .headline-title .heading-timeline img{
+        margin: 0;
+    }
+    .bulletin-news{
+        padding-bottom: 20px;
+    }
+    .bulletin-grid{
+        margin: 20px 0;
+    }
+    .bulletin-grid h4,.news .news-grid h4{
+        font-weight: bold;
+        font-size: 22px;
+    }
+    .bulletin-timeline i, .bulletin-timeline span{
+        font-size: 15px;
+    }
+    .ad-grid img{
+        width: 100%;
+    }
+    .news-img img{
+        height: 200px;
+        width: 100%;
+    }
+    .news-detail p{
+        font-size: 15px;
+    }
+    .news-headline{
+        margin-bottom: 10px;
+    }
+    .news .news-headline .bulletin-timeline{
+        margin:10px 0;
+    }
+    .news-grid .col-6{
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+    .bulletin-news-gap{
+        margin-bottom: 0;
+    }
+    .bulletin-news-gap .col-md-6{
+        margin-bottom: 10px;
+    }
+    .bulletin-news-gap img{
+        width: 100%;
+        height: 100px;
+    }
+    .corona-news{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .country-sub-grid{
+        margin-bottom: 10px;
+    }
+    .country-grid img{
+        width: 100%;
+        height: 100px;
+    }
+    .country-grid{
+        margin:0;
+    }
+    .country-grid .col-md-6{
+        margin-bottom: 10px;
+    }
+    .feature .feature-grid img{
+        height: 200px;
+    }
+    .feature .feature-grid h4{
+        font-size: 20px;
+    }
+    .tech .tech-grid img{
+        height: 100px;
+    }
+    .tech .tech-grid h4, .tech-comments-grid .number h4,.interview-extra-grid h4,.interview-grid h4,.business-extra-grid h4,.bulletin-grid h4, .sports h4, .foreign h4,.literature .newspaper-grid h4,.world-grid h4,.world-side-grid h4{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .tech .tech-comments-grid .number{
+        padding: 10px 15px;
+    }
+    .interview .interview-main .col-md-7,.interview .interview-main .col-md-5{
+        height: 200px;
+    }
+    .interview-text h2{
+        font-size: 27px;
+        font-weight: bold;
+    }
+    .interview-main img{
+        width: 100%;
+    }
+    .interview-grid{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .interview-grid .col-md-6{
+        margin: 10px 0;
+    }
+    .interview-extra-grid img{
+        height: 100px;
+    }
+    .entertainment .headline-img img{
+        height: 400px;
+    }
+    .entertainment .headline{
+        margin-bottom: 20px;
+    }
+    .health{
+        margin-top: 0;
+    }
+    .sports .sports-side-grid-img img{
+        height: 100px;
+    }
+    .world-headline{
+        margin-bottom: 20px;
+    }
+    .nepal .gallery .gallery-grid img{
+        height: 200px;
+        object-position: 0 0;
+    }
+    .gallery .col-md-3{
+        margin-bottom: 20px;
+    }
+    .footer-menu .footer-div .office-detail{
+        margin-left: 10%;
+        margin-bottom: 20px;
+    }
+    .footer .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-copyright{
+        margin-bottom: 20px;
+    }
+    
+}
+@media (min-width:426px) and (max-width:768px){
+    .ad-banner{
+        display: none;
+    }
+    .show-tab{
+        display: block;
+    }
+    .hide-tab{
+        display: none;
+    }
+    .logo #logo-date{
+        font-size: 15px;
+        margin-top: 25px;
+    }
+    .headline-1 h1{
+        font-size: 2.5rem;
+    }
+    .headline-1 .headline-title h4{
+        font-size: 17px;
+    }
+    .headline-1 .headline-img img{
+        height: 350px;
+    }
+    .bulletin-grid h4{
+        font-size: 15px;
+    }
+    .bulletin-news h2{
+        font-size: 2rem;
+    }
+    .news-headline .news-detail{
+        font-size: 15px;
+    }
+    .thoughts p{
+        font-size: 12px;
+    }
+    .thoughts h2{
+        font-size: 18px;
+    }
+    .people-grid1 h5{
+        font-size: 13px;
+    }
+    .people-grid1 img{
+        height: 50x;
+    }
+    .trending-grid h1{
+        font-size: 40px;
+    }
+    .trending-headlines h4{
+        font-size: 12px;
+    }
+    .trending1 h2,.blog h2,.tech-comments h2,.interview-section .interview-extra h2, .sports-side-grid h2,.world-headline-text h2{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    .news-option-grid p,.blog p,.news-title p{
+        font-size: 13px;
+    }
+    .news-option{
+        padding: 5px;
+    }
+    .news-grid .col-md-4{
+        padding-right: 0;
+    }
+    .literature .newspaper-grid h4, .world-side-grid h4{
+        padding: 0;
+    }
+    .world-grid .col-md-5, .world-grid .col-md-7{
+        padding-left: 0;
+    }
+    .nepal .gallery .gallery-grid img{
+        height: 200px;
+    }
+    .gallery-grid .img-text h4{
+        font-size: 12px;
+    }
+    .tech .tech-comments-grid{
+        margin: 10px 0;
+        padding: 5px 0;
+    }
+    .tech .tech-comments-grid .number{
+        padding: 6px 6px;
+        height: 50px;
+    }
+    .tech .tech-comments-grid .number h4{
+        font-size: 20px;
+    }
+    .tech .tech-comments-grid .number p{
+        font-size: 10px;
+    }
+    .tech .container{
+        padding: 0;
+    }
+    .interview-text h2{
+        font-size: 30px;
+    }
+    .interview-extra-grid .col-md-7,.interview-grid .col-md-8{
+        padding-left: 0;
+    }
+    .interview-extra-grid img{
+        height: 80px;
+    }
+    .business-extra-grid{
+        padding: 10px;
+    }
+    .business-grid .col-md-4,.entertainment-grid .col-md-5,.entertainment-grid .col-md-7, .entertainment .headline,.headline,.health .col-md-5,.sports-grid{
+        padding-right: 0;
+    }
+    .entertainment-grid h4{
+        font-size: 15px;
+    }
+    .entertainment-grid{
+        margin-bottom: 10px;
+    }
+    .entertainment .headline-text h2{
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    .entertainment h2{
+        font-size: 26px;
+    }
+    .literature .literature-grid img{
+        height: 160px;
+    }
+    .footer-menu .footer-logo img{
+        padding: 40px 10px 10px 10px;
+    }
+    .footer-menu .footer-div .office-detail{
+        margin-left: 10%;
+    }
+    .footer-menu .office-detail h1{
+        font-size: 35px;
+    }
+    .footer-menu ul li{
+        font-size: 15px;
+    }
+    .tech .tech-grid img{
+        height: 60px;
+    }
+    
+}
+@media (min-width:769px) and (max-width:1024px){
+    
+    
+    .logo #logo-date{
+        margin-right: 17px;
+        margin-top: 35px;
+    }
+    .logo #logo-date{
+        font-size: 15px;
+    }
+    .menu ul li{
+        font-size: 14px;
+    }
+    .search-box, .time{
+        width: 50px;
+        padding: 0 20px;
+    }
+    .headline-1 h1{
+        font-size: 30px;
+    }
+    .headline-1 span{
+        font-size: 14px;
+    }
+    .headline-1 .headline-title h4{
+        font-size: 17px;
+    }
+    .headline-1 .headline-img img{
+        position: relative;
+        object-fit: cover;
+        height: 300px;
+    }
+    .people-grid1 h5{
+        font-size: 15px;
+    }
+    .tech .tech-comments-grid .number{
+        padding: 6px 12px;
+        height: 60px;
+    }
+    .interview-text h2{
+        font-size: 34px;
+    }
+    .footer-menu .office-detail h1{
+        font-size: 30px;
+    }
+    .tech .tech-grid img{
+        height: 80px;
+    }
+    .trending-headlines h4{
+        font-size: 15px;
+    }
+
+}
+@media (min-width:1025px) and (max-width:1440px){
+    
+    .top-header .logo #logo-date{
+        margin-top: 40px;
+        font-size: 17px;
+    }
+    .menu{
+        align-items: center;
+    }
+    .logo{
+        align-content: center;
+    }
+    
+    .menu ul li{
+        font-size: 18px;
+    }
+    .trending-headlines h4{
+        font-size: 20px;
+    }
+    .tech .tech-comments-grid{
+        padding:20px 0;
+    }
+    .tech .tech-comments-grid .number{
+        padding: 6px 20px;
+    }
+    .tech .tech-comments-grid .number h4{
+        font-size: 30px;
+    }
+    .tech .tech-comments-grid .number p{
+        font-size: 12px;
+    }
+    .tech .tech-grid img{
+        height: 100px;
+    }
+}
+@media (min-width:1441px) and (max-width:2560px){
+   #logo-date{
+       margin-top: 40px;
+       margin-right: 20px;
+       font-size: 20px;
+   }
 }
