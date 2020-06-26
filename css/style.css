@@ -4,6 +4,7 @@ body{
     padding: 0 0px;
     box-sizing: border-box;
 }
+<<<<<<< HEAD
 .sticky {
     position: fixed;
     width: 100%;
@@ -18,6 +19,11 @@ body{
   .active{
       background-color: darkblue;
   }
+=======
+p{
+    margin: 0;
+}
+>>>>>>> ecfd456e0bb131560552c9d834e9c70ea779a412
 .padding-0{
     padding: 0;
 }
@@ -939,6 +945,7 @@ a:hover{
 body::selection{
     background: skyblue;
 }
+<<<<<<< HEAD
 
 @media screen and (max-width: 425px){
     .hide-mobile{
@@ -1331,3 +1338,5 @@ body::selection{
        font-size: 20px;
    }
 }
+=======
+>>>>>>> ecfd456e0bb131560552c9d834e9c70ea779a412
