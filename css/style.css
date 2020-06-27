@@ -1056,6 +1056,12 @@ body::selection{
     .nepal .gallery .col-md-3{
         margin-bottom: 20px;
     }
+    .bulletin .bulletin-news .col-md-6{
+        margin-bottom: 10px;
+    }
+    .bulletin-news-gap{
+        margin-bottom: 0;
+    }
     .footer-menu .footer-div .office-detail{
         margin:0;
     }
@@ -1073,7 +1079,7 @@ body::selection{
         margin-bottom: 20px;
     }
 }
-@media (min-width:376px) and (max-width: 425px){
+@media (min-width:375px) and (max-width: 425px){
     .hide-mobile{
         display: none;
     }
