@@ -1463,6 +1463,7 @@ body::selection{
         height: 100px;
     }
 }
+
 @media (min-width:1441px) and (max-width:2560px){
    #logo-date{
        margin-top: 40px;
