@@ -56,7 +56,6 @@ padding: 0;
     padding: 12px 15px;
 }
 .menu ul li a:hover, header .header-nav:hover{
-    color: white;
     background-color:darkblue;
 }
 .search-tooltip{
@@ -104,6 +103,7 @@ padding: 0;
 }
 .search-box, .time{
     padding: 0 20px;
+    cursor: pointer;
 }
 .search-box i, .time i{
     color: white;
@@ -442,7 +442,7 @@ a:hover{
     background: #e0dfda;
     height: 10px;
     width: 10px;
-    margin-left: 110px;
+    margin-left: 55px;
     transform: rotate(45deg);
 }
 .trending-grid,.newspaper-grid, .world-side-grid,.business-extra-grid,.world-side-grid{
@@ -1404,7 +1404,9 @@ body::selection{
 }
 @media (min-width:769px) and (max-width:1024px){
     
-    
+    .menu ul li a{
+        padding: 14px 15px;
+    }
     .logo #logo-date{
         margin-right: 17px;
         margin-top: 35px;
@@ -1417,7 +1419,6 @@ body::selection{
     }
     .search-box, .time{
         width: 50px;
-        padding: 0 20px;
     }
     .search-tooltip{
         left: 26px;
