@@ -11,7 +11,6 @@ body{
     z-index: 1;
   }
   #navbar{
-      overflow: hidden;
       width: 100%;
       background-color: blue;
   }
@@ -67,7 +66,7 @@ padding: 0;
     background: black;
     color: white;
     bottom: -26px;
-    left: 78px;
+    left: 99px;
     padding: 4px 13px;
 }
 .time-tooltip{
@@ -78,7 +77,7 @@ padding: 0;
     color: white;
     padding:4px 13px;
     bottom: -26px;
-    left: 129px;
+    left: 155px;
 }
 .trending-tooltip{
     font-size: 12px;
@@ -87,7 +86,7 @@ padding: 0;
     background: black;
     color: white;
     padding:4px 13px;
-    left: 179px;
+    left: 211px;
     bottom: -26px;
 }
 .trending{
@@ -443,7 +442,7 @@ a:hover{
     background: #e0dfda;
     height: 10px;
     width: 10px;
-    margin-left: 55px;
+    margin-left: 110px;
     transform: rotate(45deg);
 }
 .trending-grid,.newspaper-grid, .world-side-grid,.business-extra-grid,.world-side-grid{
@@ -948,8 +947,17 @@ body::selection{
         display: none;
     }
     #logo-date{
-        margin-top: 45px;
+        margin-top: 52px;
         margin-right: 20px;
+    }
+    .search-tooltip{
+        left: -5px;
+    }
+    .time-tooltip{
+        left: 31px;
+    }
+    .trending-tooltip{
+        left: 67px;
     }
     .search-box,.time,.trending,.english{
         padding: 0 10px;
@@ -1079,7 +1087,7 @@ body::selection{
         margin-bottom: 20px;
     }
 }
-@media (min-width:375px) and (max-width: 425px){
+@media (min-width:376px) and (max-width: 425px){
     .hide-mobile{
         display: none;
     }
@@ -1087,6 +1095,15 @@ body::selection{
         font-size: 18px;
         margin-top: 60px;
         margin-right: 20px;
+    }
+    .search-tooltip{
+        left: -42px;
+    }
+    .time-tooltip{
+        left: 14px;
+    }
+    .trending-tooltip{
+        left: 70px;
     }
     .ad-banner{
         display: none;
@@ -1265,6 +1282,15 @@ body::selection{
     .bulletin-news h2{
         font-size: 2rem;
     }
+    .search-tooltip{
+        left: -69px;
+    }
+    .time-tooltip{
+        left: -13px;
+    }
+    .trending-tooltip{
+        left: 43px;
+    }
     .news-headline .news-detail{
         font-size: 15px;
     }
@@ -1392,6 +1418,15 @@ body::selection{
     .search-box, .time{
         width: 50px;
         padding: 0 20px;
+    }
+    .search-tooltip{
+        left: 26px;
+    }
+    .time-tooltip{
+        left: 76px;
+    }
+    .trending-tooltip{
+        left: 126px;
     }
     .headline-1 h1{
         font-size: 30px;
